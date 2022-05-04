@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+</head>
+
+<body>
+
+    <script>
+        
+        let url = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-0FE060DA-6458-4A7E-A9AA-75D421EBBE7F'
+        fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-0FE060DA-6458-4A7E-A9AA-75D421EBBE7F') //去遠端取資料
+
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) { //然後=>把資料做轉換
+                // console.log(data); 
+                //顯示你所接收的資料後=>再來決定如何使用
+                
+                //宣告所有課程
+                let cities = data.records.location
+                console.log(cities);
+                // //宣告所有城市
+                // let cities = [];
+                // for (let i = 0; i < data_records.length; i++){
+                    //     // cities.push(data_records[i]);
+                    //     // console.log(cities[i]);
+                    // }
+                    
+                    for (let i = 0; i < cities.length; i++){
+                    let city = cities[i];
+                    let weather_time = city.weatherElement[0].time[0];
+                    // console.log(weather_time.startTime); 
+                    //抓出開始時間;
+                    
+                    // console.log(weather_time.endTime); 
+                    //抓出開始時間;
+                    
+                    let MaxT = cities[i].weatherElement[4].time[0].parameter.parameterName;
+                    // console.log(MaxT);
+                    
+                }
+            });
+    </script>
+
+</body>
+
+</html>

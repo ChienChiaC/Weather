@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Pic</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .title {
+            width: 100%;
+            height: 130px;
+            /* text-align: center; */
+            padding-top: 15px;
+            /* padding-left: 120px; */
+            font-size: 60px;
+            color: rgb(71, 122, 124);
+            font-weight: bolder;
+            text-align: center;
+            background-color: rgb(228, 228, 228);
+
+        }
+
+        .line {
+            /* float: center; */
+            /* top: 65px; left: 50%; */
+            /* transform: translateX(-50%); */
+            width: 100%;
+            height: 5px;
+            border-top: 2px dashed rgb(140, 160, 161);
+            /* background-color: rgb(71, 122, 124); */
+            margin-top: 15px;
+        }
+
+
+        .card-region {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(228, 228, 228);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: flex-start;
+
+        }
+
+        .single-card {
+            width: 320px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin: 10px;
+            /* border: 10px solid rgb(228, 228, 228); */
+            background-color: rgb(255, 255, 240);
+            box-shadow: 1px 1px 3px 3px rgb(209, 209, 209, .8);
+            background-image: linear-gradient(to bottom, rgb(255, 255, 240), #c2d8d6);
+        }
+
+        .single-card:hover {
+            background-image: linear-gradient(to bottom, rgb(255, 255, 240), #b6dbec);
+        }
+
+        .happen1 {
+            background-image: url(./img/w-02.png);
+        }
+
+        .happen2 {
+            background-image: url(./img/w-03.png);
+        }
+
+        .happen3 {
+            background-image: url(./img/w-04.png);
+        }
+
+        .happen4 {
+            background-image: url(./img/w-05.png);
+        }
+
+        .happen5 {
+            background-image: url(./img/w-06.png);
+        }
+
+        .happen6 {
+            background-image: url(./img/w-07.png);
+        }
+
+        .happen7 {
+            background-image: url(./img/w-08.png);
+        }
+
+        .happen8 {
+            background-image: url(./img/w-09.png);
+        }
+
+        .happen9, happen12 {
+            background-image: url(./img/w-10.png);
+        }
+
+        .happen10, happen13 {
+            background-image: url(./img/w-11.png);
+        }
+
+        .happen11, happen14,happen30 {
+            background-image: url(./img/w-12.png);
+        }
+
+        .happen15, .happen16,.happen17, .happen18 {
+            background-image: url(./img/w-15.png);
+        }
+
+        .happen19,happen20,happen29{
+            background-image: url(./img/w-13.png);
+        }
+
+        .happen21,happen22,happen33{
+            background-image: url(./img/w-14.png);
+        }
+        .cardtitle {
+
+            height: 80px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 5px;
+            align-items: center;
+
+        }
+
+        .pic {
+            width: 70px;
+            height: 70px;
+            /* background-image: url(./img/sunny.svg); */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 150%;
+            margin-left: 0px;
+            border-radius: 35px;
+        }
+
+
+        .cityP {
+            font-size: 40px;
+            font-weight: bolder;
+            padding: 0;
+            margin-top: 0;
+            line-height: 80px;
+            color: rgb(83, 94, 94);
+        }
+
+        p {
+            margin-bottom: 0px;
+        }
+
+        .wxP {
+            width: 280px;
+            height: 50px;
+            margin-top: 5px;
+            border-top: 5px solid rgba(165, 184, 184, 0.5);
+            /* background-color: rgb(192, 214, 214,.5); */
+            font-size: 25px;
+            font-weight: bolder;
+            line-height: 60px;
+            border-radius: 25px;
+            text-align: center;
+            padding-top: 5px;
+            color: rgb(88, 124, 124);
+        }
+
+        .timeP {
+            display: flex;
+            font-size: 13px;
+            color: rgb(89, 99, 99);
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+
+        .timeP p {
+            margin-left: 3px;
+            margin-right: 3px;
+
+        }
+
+        .btnList {
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(228, 228, 228);
+        }
+
+        .btn {
+            width: 80px;
+            height: 40px;
+            margin-left: 5px;
+            margin-right: 5px;
+            font-size: 20px;
+            border-radius: 20px;
+            border: 1px solid rgb(159, 167, 152);
+            box-shadow: 1px 1px 2px 1px rgba(156, 156, 156, 0.6);
+            font-weight: bolder;
+            color: #3d4443;
+        }
+
+        .btn:hover {
+            background-color: rgb(190, 203, 204);
+            color: #3d4443;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section>
+        <div class="title">天氣預報
+            <div class="line"></div>
+        </div>
+        <div class="btnList">
+            <button class="btn btnAll">全部</button>
+            <button class="btn btnNorth">北部</button>
+            <button class="btn btnCenter">中部</button>
+            <button class="btn btnSouth">南部</button>
+            <button class="btn btnEast">東部</button>
+            <button class="btn btnOut">離島</button>
+        </div>
+        <div class="card-region">
+            <div class="single-card">
+                <div class="pic"></div>
+                <p>台中市</p>
+                <P>晴天</P>
+                <p>2022-04-27 06:00</p>
+                <p>2022-04-27 08:00</p>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        let NorthBtn = document.querySelector('.btnNorth');
+        let CenterBtn = document.querySelector('.btnCenter');
+        let SorthBtn = document.querySelector('.btnSouth');
+        let EastBtn = document.querySelector('.btnEast');
+        let OutBtn = document.querySelector('.btnOut');
+        let AllBtn = document.querySelector('.btnAll');
+
+
+        let url = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-0FE060DA-6458-4A7E-A9AA-75D421EBBE7F'
+
+        let Cities = [
+            ['基隆市', '新北市', '臺北市', '桃園市', '新竹市', '新竹縣', '苗栗縣', '臺中市', '南投縣', '彰化縣', '雲林縣', '嘉義市', '嘉義縣', '臺南市', '高雄市', '屏東縣', '宜蘭縣', '花蓮縣', '臺東縣', '澎湖縣', '金門縣', '連江縣'],
+
+            ['基隆市', '新北市', '臺北市', '桃園市', '新竹市', '新竹縣', '苗栗縣'],
+            ['臺中市', '南投縣', '彰化縣', '雲林縣', '嘉義市', '嘉義縣'],
+            ['臺南市', '高雄市', '屏東縣'],
+            ['宜蘭縣', '花蓮縣', '臺東縣'],
+            ['澎湖縣', '金門縣', '連江縣'],
+        ]
+
+        let nowCities;//代表天氣卡處理需要顯示的城市
+        let orgData = {} //組織過的資料
+
+        // let weather_time = nowCity.weatherElement[0].time[0];
+        nowCities = Cities[0]
+
+        fetch_data(); //取資料
+
+        function fetch_data() {  //非同步處理 => ajax
+            fetch(url)//去遠端取資料
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) { //然後=>把資料做轉換
+                    console.log(data); //顯示你所接收的資料後 =>再決定如何使用
+                    organizationData(data); //處理資料的組織
+                    arrange_cities(); //處理所有城市
+                });
+        }
+
+        function organizationData(data) {
+            let locations = data.records.location; //所有城市
+            locations.forEach(location => {
+                console.log('location =', location);
+                let locationName = location.locationName;
+                let loc_wE_t_0 = location.weatherElement[0].time[0];//取出時間訊息
+
+                let startTime = loc_wE_t_0.startTime;
+                let endTime = loc_wE_t_0.endTime;
+                let wx = loc_wE_t_0.parameter.parameterName;
+                let picS = loc_wE_t_0.parameter.parameterValue;
+                // console.log(startTime);    //抓出開始時間;   
+                // console.log(endtTime);     //抓出開始時間;
+                // console.log(wx); 
+                let maxT = location.weatherElement[4].time[0].parameter.parameterName;
+                let minT = location.weatherElement[2].time[0].parameter.parameterName;
+                let pop = location.weatherElement[1].time[0].parameter.parameterName;
+                let ci = location.weatherElement[3].time[0].parameter.parameterName;
+
+                orgData[locationName] = {
+
+                    'wx': wx, 'startTime': startTime, 'endTime': endTime, 'maxT': maxT, 'minT': minT,
+                    'pop': pop, 'ci': ci, 'picS': picS
+                }
+
+
+            });
+            // console.log(orgData);
+        }
+
+
+        //處理每個城市
+        function arrange_cities() {
+            let card_region = document.querySelector('.card-region')
+            card_region.innerHTML = '';
+            nowCities.forEach((city, index) => {
+                let cityData = orgData[city];
+                // let happen = cityData.picS;
+                
+            
+                // console.log(cityData.endTime);
+                card_region.innerHTML +=
+                    // ${index}單張卡片切版的內容
+                    `<div class="single-card">
+                    <div class="cardtitle">
+                    <p class="cityP">${city}</p>
+                    <div class="pic happen${cityData.picS}"></div>
+                    </div>
+                    <P class="wxP">${cityData.wx}</P>
+                    <div class="timeP">
+                    <p>${cityData.startTime.substr(0, 16).replaceAll('-', '/')}</p><p>~</p>
+                     <p>${cityData.endTime.substr(0, 16).replaceAll('-', '/')}</p>
+                     </div>
+                    </div>            
+                         `
+                    ;
+
+            });
+
+
+
+            NorthBtn.addEventListener('click', function () {
+                card_region.innerHTML = '';
+                nowCities = Cities[1];
+                arrange_cities()
+            });
+
+            CenterBtn.addEventListener('click', function () {
+                card_region.innerHTML = '';
+                nowCities = Cities[2];
+                arrange_cities()
+            });
+
+            SorthBtn.addEventListener('click', function () {
+                card_region.innerHTML = '';
+                nowCities = Cities[3];
+                arrange_cities()
+            });
+
+            EastBtn.addEventListener('click', function () {
+                card_region.innerHTML = '';
+                nowCities = Cities[4];
+                arrange_cities()
+            });
+
+            OutBtn.addEventListener('click', function () {
+                card_region.innerHTML = '';
+                nowCities = Cities[5];
+                arrange_cities()
+            });
+
+            AllBtn.addEventListener('click', function () {
+                card_region.innerHTML = '';
+                nowCities = Cities[0];
+                arrange_cities()
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>
